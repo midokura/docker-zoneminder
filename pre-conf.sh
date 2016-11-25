@@ -1,5 +1,9 @@
 #!/bin/bash
 
+ #Midokura
+ #Set the correct paht for cgi-bin
+ sed -i 's/\/cgi-bin\/nph-zms/\/zm\/cgi-bin\/nph-zms/g' /usr/share/zoneminder/db/zm_create.sql
+
  #fix problem relate to update mysql
  echo "sql_mode = NO_ENGINE_SUBSTITUTION" >> /etc/mysql/mysql.conf.d/mysqld.cnf
  cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/my.cnf

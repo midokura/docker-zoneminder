@@ -5,7 +5,8 @@ set -e
 
 if [ -f /etc/configured ]; then
         echo 'already configured'
-        
+        # Midokura - startup ffserver
+        ffserver&
         /sbin/zm.sh&
 else
         #to fix problem with data.timezone that appear at 1.28.108 for some reason
